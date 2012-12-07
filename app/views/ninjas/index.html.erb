@@ -1,0 +1,23 @@
+<h1>Listing ninjas</h1>
+
+<table>
+  <tr>
+    <th>Name</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @ninjas.each do |ninja| %>
+  <tr>
+    <td><%= ninja.name %></td>
+    <td><%= link_to 'Show', ninja %></td>
+    <td><%= link_to 'Edit', edit_ninja_path(ninja) %></td>
+    <td><%= link_to 'Destroy', ninja, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Ninja', new_ninja_path %>
