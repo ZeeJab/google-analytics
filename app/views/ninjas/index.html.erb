@@ -1,3 +1,9 @@
+<%= link_to "login", "auth/twitter" %>
+<%= link_to "logout", "/signout" %>
+
+name:
+<%= @auth.try(:name) %>
+
 <h1>Listing ninjas</h1>
 
 <table>
@@ -21,3 +27,20 @@
 <br />
 
 <%= link_to 'New Ninja', new_ninja_path %>
+
+
+$(function(){
+  
+  $('<input>').innerHTML.val('hello world')
+  $('input').val('')
+  for
+  
+});
+
+function createInput(){
+  var input = document.createElement('input');
+  input.type = 'hello world';
+  input.value = '';
+  input.onclick = function(){
+  alert("a");
+}

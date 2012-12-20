@@ -1,4 +1,9 @@
 GoogleAnalytics::Application.routes.draw do
+
+  match '/auth/:provider/callback' => 'sessions#create'
+  match '/auth/failure' => redirect('/')
+  match '/signout' => 'sessions#destroy'
+
   resources :ninjas
 
 
